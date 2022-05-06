@@ -1,0 +1,95 @@
+body{
+    margin: 0 px;
+    padding: 0 px;
+}
+
+
+.container-1{
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+
+
+.box{
+
+padding: 30px;
+margin: 5px;
+
+
+}
+
+$color-base: rgba(76, 175, 80, 25%);
+ .base-color{
+    background: $color-base;
+ }
+
+$i: 1;
+@for $i from 1 through 4{
+
+    .lighten-#{$i}{
+        background: rgba(76, 175, 80, 25% / $i)
+    }
+}
+
+$j: 1;
+@for $j from 1 through 4{
+
+    .darken-#{$j}{
+        background: rgba(76, 175, 80, 25% * $j)
+    }
+}
+
+
+
+
+
+
+
+
+$color-base2: rgba(5, 3, 122, 0.25);
+ .base-color2{
+    background: $color-base2;
+ }
+
+$i: 1;
+@for $i from 1 through 4{
+
+    .lighten2-#{$i}{
+        background: rgba(5, 3, 122, 25% / $i)
+    }
+}
+
+$j: 1;
+@for $j from 1 through 4{
+
+    .darken2-#{$j}{
+        background: rgba(5, 3, 122, 25% * $j)
+    }
+}
+
+
+$color-base3: rgba(122, 3, 35, 0.25);
+ .base-color3{
+    background: $color-base3;
+ }
+
+$i: 1;
+@for $i from 1 through 4{
+
+    .lighten3-#{$i}{
+        background: rgba(122, 3, 35, 25% / $i)
+    }
+}
+
+$j: 1;
+@for $j from 1 through 4{
+
+    .darken3-#{$j}{
+        background: rgba(122, 3, 35, 25% * $j)
+    }
+}
+
+ 

@@ -1,0 +1,94 @@
+body {
+  margin: 0 px;
+  padding: 0 px; }
+
+.container-1 {
+  display: flex;
+  flex-direction: row; }
+
+.box {
+  padding: 30px;
+  margin: 5px; }
+
+.base-color {
+  background: rgba(76, 175, 80, 0.25); }
+
+.lighten-1 {
+  background: rgba(76, 175, 80, 0.25); }
+
+.lighten-2 {
+  background: rgba(76, 175, 80, 0.125); }
+
+.lighten-3 {
+  background: rgba(76, 175, 80, 0.0833333333); }
+
+.lighten-4 {
+  background: rgba(76, 175, 80, 0.0625); }
+
+.darken-1 {
+  background: rgba(76, 175, 80, 0.25); }
+
+.darken-2 {
+  background: rgba(76, 175, 80, 0.5); }
+
+.darken-3 {
+  background: rgba(76, 175, 80, 0.75); }
+
+.darken-4 {
+  background: #4caf50; }
+
+.base-color2 {
+  background: rgba(5, 3, 122, 0.25); }
+
+.lighten2-1 {
+  background: rgba(5, 3, 122, 0.25); }
+
+.lighten2-2 {
+  background: rgba(5, 3, 122, 0.125); }
+
+.lighten2-3 {
+  background: rgba(5, 3, 122, 0.0833333333); }
+
+.lighten2-4 {
+  background: rgba(5, 3, 122, 0.0625); }
+
+.darken2-1 {
+  background: rgba(5, 3, 122, 0.25); }
+
+.darken2-2 {
+  background: rgba(5, 3, 122, 0.5); }
+
+.darken2-3 {
+  background: rgba(5, 3, 122, 0.75); }
+
+.darken2-4 {
+  background: #05037a; }
+
+.base-color3 {
+  background: rgba(122, 3, 35, 0.25); }
+
+.lighten3-1 {
+  background: rgba(122, 3, 35, 0.25); }
+
+.lighten3-2 {
+  background: rgba(122, 3, 35, 0.125); }
+
+.lighten3-3 {
+  background: rgba(122, 3, 35, 0.0833333333); }
+
+.lighten3-4 {
+  background: rgba(122, 3, 35, 0.0625); }
+
+.darken3-1 {
+  background: rgba(122, 3, 35, 0.25); }
+
+.darken3-2 {
+  background: rgba(122, 3, 35, 0.5); }
+
+.darken3-3 {
+  background: rgba(122, 3, 35, 0.75); }
+
+.darken3-4 {
+  background: #7a0323; }
+
+/*# sourceMappingURL=estilos.css.map */
