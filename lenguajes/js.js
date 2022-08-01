@@ -47,3 +47,33 @@ const arrayLast = ['primer', 'segundo', 'último'];
 const last = (nums) => nums.pop();
 
 console.log("Devuelve el último elemento: " + last(arrayLast));
+
+/**
+ * Concat
+ * 
+ * Implementa una función `concat` (inmutable) tal que, dados 2 arrays como entrada, devuelva la concatenación de ambos. Utiliza rest / spread operators.
+ */
+const arrayUno = ['a','b','c'];
+const arrayDos = ['d', 'e', 'f'];
+
+const concat = (a,b) => arrayUno.concat(arrayDos);
+
+console.log(concat(arrayUno,arrayDos));
+
+/**
+ * Clone
+ * Implementa una función `clone` que, a partir de un objeto de entrada `source` devuelva un nuevo objeto con las propiedades de `source`:
+ */
+const original = {
+    name: 'Ana',
+    surname: 'Martín'
+
+} 
+
+function clone(original){
+
+    const copy = {...original}
+    console.log(copy);
+}
+
+clone(original);
