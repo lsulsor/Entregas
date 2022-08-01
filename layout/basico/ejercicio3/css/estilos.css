@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color:darkslategray;
+    color: antiquewhite;
+    justify-content: space-between;
+    border: 5px black solid;
+    
+}
+
+.elemento{
+    padding: 20px;
+    
+}
+
+@media screen and (max-width:768px){
+
+.container {
+    flex-direction: column;
+   
+}
+}
