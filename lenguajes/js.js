@@ -10,32 +10,29 @@ Implementa una función `head` (inmutable), tal que, dado un array como entrada 
 const array = [0, 1, 2, 3];
 const head = ([first]) => first;
 
-console.log('El primer elemento del array es: ' + head(array));
+console.log("El primer elemento del array es: " + head(array));
 
 /**
  * Tail
  * Implementa una función `tail` (inmutable), tal que, dado un array como entrada devuelta todos menos el primer elemento. Utiliza rest operator.
- * 
+ *
  */
 
+const tail = (_first, ...nums) => nums;
 
-
-const tail = (_first, ...nums) => nums
-
-console.log('Devuelve todos los elemento menos el primero: ' + tail(0, 1, 2, 3));
-
+console.log(
+  "Devuelve todos los elemento menos el primero: " + tail(0, 1, 2, 3)
+);
 
 /**
  * Init
  * Implementa una función `init` (inmutable), tal que, dado un array como entrada devuelva todos los elementos menos el último. Utiliza los métodos que ofrece Array.prototype.
  */
 
-const init = (nums) =>{
-
-nums.pop();
-return console.log(`Devuelve todos los elementos menos el último: ${nums}`);
-
-}
+const init = (nums) => {
+  nums.pop();
+  return console.log(`Devuelve todos los elementos menos el último: ${nums}`);
+};
 
 init(array);
 
@@ -43,37 +40,34 @@ init(array);
  * Last
  * Implementa una función `last` (inmutable), tal que, dado un array como entrada devuelva el último elemento.
  */
-const arrayLast = ['primer', 'segundo', 'último'];
+const arrayLast = ["primer", "segundo", "último"];
 const last = (nums) => nums.pop();
 
 console.log("Devuelve el último elemento: " + last(arrayLast));
 
 /**
  * Concat
- * 
+ *
  * Implementa una función `concat` (inmutable) tal que, dados 2 arrays como entrada, devuelva la concatenación de ambos. Utiliza rest / spread operators.
  */
-const arrayUno = ['a','b','c'];
-const arrayDos = ['d', 'e', 'f'];
+const arrayUno = ["a", "b", "c"];
+const arrayDos = ["d", "e", "f"];
 
-const concat = (a,b) => arrayUno.concat(arrayDos);
+const concat = (a, b) => arrayUno.concat(arrayDos);
 
-console.log(concat(arrayUno,arrayDos));
+console.log(concat(arrayUno, arrayDos));
 
 /**
  * Clone
  * Implementa una función `clone` que, a partir de un objeto de entrada `source` devuelva un nuevo objeto con las propiedades de `source`:
  */
 const original = {
-    name: 'Ana',
-    surname: 'Martín'
+  name: "Ana",
+  surname: "Martín",
+};
 
-} 
-
-function clone(...original){
-
-    
-    console.log(original);
+function clone(...original) {
+  console.log(original);
 }
 
 clone(original);
@@ -92,7 +86,6 @@ function merge(...arr) {
   }, {});
 }
 
- ;
 console.log(merge(a, b));
 
 /**
@@ -111,15 +104,43 @@ const books = [
 
 function isBookRead(books, titleToSearch) {
   let resultado = false;
-    books.forEach(element => {
-
-       if (element.title == titleToSearch && element.isRead) {
-          resultado = true;
-       }
-    });
-     return resultado;
+  books.forEach((element) => {
+    if (element.title == titleToSearch && element.isRead) {
+      resultado = true;
+    }
+  });
+  return resultado;
 }
 
-console.log(isBookRead(books, "Devastación"));
-console.log(isBookRead(books, "Canción de hielo y fuego")); // false
-console.log(isBookRead(books, "Los Pilares de la Tierra"));
+/* console.log(isBookRead(books, "Devastación"));
+console.log(isBookRead(books, "Canción de hielo y fuego")); 
+console.log(isBookRead(books, "Los Pilares de la Tierra")); */
+
+/**
+ * Slot Machine
+ * El objetivo de este ejercicio es crear una máquina tragaperras utilizando clases donde cada vez que juguemos insertemos una moneda. Cada máquina tragaperras (instancia) tendrá un **contador de monedas** que automáticamente se irá incrementando conforme vayamos jugando.
+ */
+
+class Maquina {
+  constructor() {
+    this.contador = 0;
+  }
+  play() {
+    if (Math.random() < 0.5 && Math.random() < 0.5 && Math.random() < 0.5) {
+      console.log(`Congratulations!!!. You won ${this.contador} coins!`);
+      this.contador = 0;
+    } else {
+      this.contador = this.contador + 1;
+      console.log("Good luck next time!!");
+    }
+
+   
+  }
+ 
+}
+
+const maquina1 = new Maquina();
+maquina1.play();
+maquina1.play();
+maquina1.play();
+
