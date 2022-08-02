@@ -86,6 +86,40 @@ clone(original);
 const a = { name: "Maria", surname: "Ibañez", country: "SPA" };
 const b = { name: "Luisa", age: 31, married: true };
 
-//const merge = (a, b) => a.concat(b);
+function merge(...arr) {
+  return arr.reduce((acc, val) => {
+    return { ...val, ...acc };
+  }, {});
+}
 
-//console.log(merge(a, b));
+ ;
+console.log(merge(a, b));
+
+/**
+ * Read Books
+ * 
+ * Crea una función isBookRead que reciba una lista de libros y un título y devuelva si se ha leído o no dicho libro.
+Un libro es un objeto con `title` como string y `isRead` como booleano. En caso de no existir el libro devolver `false`
+TIP: Existe un método de Array.prototype que te ayudará a buscar según un patrón.
+ */
+
+const books = [
+  { title: "Harry Potter y la piedra filosofal", isRead: true },
+  { title: "Canción de hielo y fuego", isRead: false },
+  { title: "Devastación", isRead: true },
+];
+
+function isBookRead(books, titleToSearch) {
+  let resultado = false;
+    books.forEach(element => {
+
+       if (element.title == titleToSearch && element.isRead) {
+          resultado = true;
+       }
+    });
+     return resultado;
+}
+
+console.log(isBookRead(books, "Devastación"));
+console.log(isBookRead(books, "Canción de hielo y fuego")); // false
+console.log(isBookRead(books, "Los Pilares de la Tierra"));
