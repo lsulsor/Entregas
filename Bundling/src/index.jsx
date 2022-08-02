@@ -7,6 +7,6 @@ const root = createRoot(document.getElementById("root"));
 root.render(
   <div>
     <h2>Hola Mundo desde React</h2>
-    <img src="img.png"></img>
+    <img src="../content/logo_2.png"></img>
   </div>
 );
