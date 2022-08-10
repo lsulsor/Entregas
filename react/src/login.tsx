@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import Button from "@mui/material/Button";
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const [username, setUsername] = React.useState("");
@@ -39,7 +39,7 @@ export const LoginPage: React.FC = () => {
           </div>
         </div>
 
-        <button type="submit">Login</button>
+        <Button variant="contained" type="submit">Login</Button>
       </form>
     </>
   );
