@@ -15,3 +15,5 @@ export const AverageComponent = () => {
     </div>
   );
 };
+
+

@@ -5,10 +5,10 @@ const path = require("path");
 module.exports = {
   context: path.resolve(__dirname, "./src"),
     resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: [".js", ".ts", ".tsx"],
   },
   entry: {
-    aplicacion: "./index.jsx",
+    aplicacion: "./index.tsx",
     estilosterceros: "../node_modules/bootstrap/dist/css/bootstrap.css",
   },
   output: {
@@ -18,7 +18,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /node_modules/,
         loader: "babel-loader",
       },
@@ -53,6 +53,7 @@ module.exports = {
       chunkFilename: "[id].css",
     }),
   ],
+  devtool:"eval-source-map",
   devServer: {
     hot: true,
     static: {
