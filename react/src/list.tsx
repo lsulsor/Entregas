@@ -20,9 +20,14 @@ const useList = () => {
   const [debouncedFilter] = useDebounce(value, 1000);
 
   const loadUsers = () =>{
-    fetch(`https://api.github.com/orgs/${debouncedFilter}/members`)
-      .then((response) => response.json())
-      .then((json) => setMembers(json));
+        if (debouncedFilter =="") {
+
+        } else {
+               fetch(`https://api.github.com/orgs/${debouncedFilter}/members`)
+                 .then((response) => response.json())
+                 .then((json) => setMembers(json));
+        }
+
   }
 
 
@@ -31,8 +36,7 @@ const useList = () => {
 }
 
 export const ListPage: React.FC = () => {
-
-const { members, value, setValue, debouncedFilter, loadUsers} = useList();
+  const { members, value, setValue, debouncedFilter, loadUsers } = useList();
   React.useEffect(() => {
    loadUsers(); 
   }, [debouncedFilter]);
@@ -54,13 +58,17 @@ const { members, value, setValue, debouncedFilter, loadUsers} = useList();
         <span className="list-header">Avatar</span>
         <span className="list-header">Id</span>
         <span className="list-header">Name</span>
-        {members.map((member) => (
+
+        { Array.isArray(members) ? 
+        members.map((member) => (
           <>
             <img src={member.avatar_url} />
             <span>{member.id}</span>
             <Link to={`/detail/${member.login}/`}>{member.login}</Link>
           </>
-        ))}
+        )) :null
+        
+        }
       </div>
       <Link to="/detail">Navigate to detail page</Link>
     </>
