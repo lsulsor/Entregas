@@ -18,29 +18,40 @@ export const LoginPage: React.FC = () => {
 
   return (
     <>
-      <form onSubmit={handleNavigation}>
-        <h2>Hello from login page</h2>
+      <div className="custom-page">
+        <section className="form-section">
+          <h1 className="heading">LOGIN</h1>
+          <form onSubmit={handleNavigation}>
+            <div className="input-block">
+              <label className="label">Username: </label>
+              <input
+                className="input"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="User is 'admin'"
+                tabIndex={-1}
+                required
+              />
+            </div>
+            <div className="input-block">
+              <label className="label">Password: </label>
+              <input
+                className="input"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Paswword is 'test'"
+                tabIndex={-1}
+                required
+              />
+            </div>
 
-        <div>
-          <div>
-            <label>Username: </label>
-            <input
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
-          <div>
-            <label>Password: </label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            />
-          </div>
-        </div>
-
-        <Button variant="contained" type="submit">Login</Button>
-      </form>
+            <Button variant="contained" type="submit">
+              Login
+            </Button>
+          </form>
+        </section>
+      </div>
     </>
   );
 };

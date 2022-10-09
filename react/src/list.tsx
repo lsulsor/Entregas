@@ -16,7 +16,7 @@ interface MemberEntity {
 const useList = () => {
 
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
-  const [value, setValue] = React.useState("lemoncode");
+  const [value, setValue] = React.useState("google");
   const [debouncedFilter] = useDebounce(value, 1000);
 
   const loadUsers = () =>{
@@ -44,11 +44,12 @@ const { members, value, setValue, debouncedFilter, loadUsers} = useList();
         onChange={(e) => {
           setValue(e.target.value);
         }}
+        required
       />
       <Typography sx={{ fontSize: 30 }} color="text.secondary" gutterBottom>
         Hello from List page
       </Typography>
-     
+
       <div className="list-user-list-container">
         <span className="list-header">Avatar</span>
         <span className="list-header">Id</span>
