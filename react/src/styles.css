@@ -4,13 +4,17 @@
   grid-template-rows: 20px;
   grid-auto-rows: 80px;
   grid-gap: 10px 5px;
+  text-align: center;
+  background-color: rgb(237, 243, 243);
 
 }
 
 .list-header {
-  background-color: #2f4858;
+  background-color: #003e58;
   color: white;
   font-weight: bold;
+  text-align: center;
+  font-size: 16px;
 }
 
 .list-user-list-container > img {
@@ -45,6 +49,11 @@ body {
   display: grid;
   place-content: center;
 }
+.form-sectionList {
+  min-height: 20vh;
+  display: grid;
+  place-content: center;
+}
 
 .input-block {
   display: flex;
@@ -60,6 +69,15 @@ body {
   font-size: 1.35rem;
   color: #000;
   margin-bottom: 0.35em;
+}
+.labelList {
+  font-family: 'Roboto';
+  letter-spacing: 0.25px;
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: #000;
+  margin-bottom: 0.35em;
+  margin-left: -8%;
 }
 
 .requiredLabel {
@@ -100,17 +118,6 @@ body {
   justify-content: flex-end;
 }
 
-.submit-button {
-  margin-top: 1.75rem;
-  background-color: #000;
-  color: #fff;
-  letter-spacing: 0.5px;
-  padding: 0.85em 2.2em;
-  border: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  border-radius: 4px;
-}
 
 .button-success {
   color: white;
@@ -127,4 +134,31 @@ body {
   background: url(./svg/bg.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.linkbutton {
+  box-shadow: 0px 10px 14px -7px #276873;
+  background: linear-gradient(to bottom, #599bb3 5%, #408c99 100%);
+  background-color: #599bb3;
+  border-radius: 8px;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #3d768a;
+  margin-left: 2%;
+}
+
+.linkbutton:hover {
+  background: linear-gradient(to bottom, #408c99 5%, #599bb3 100%);
+  background-color: #408c99;
+}
+
+.linkbutton:active {
+  position: relative;
+  top: 1px;
 }

@@ -16,7 +16,7 @@ interface MemberEntity {
 const useList = () => {
 
   const [members, setMembers] = React.useState<MemberEntity[]>([]);
-  const [value, setValue] = React.useState("google");
+  const [value, setValue] = React.useState("Google");
   const [debouncedFilter] = useDebounce(value, 1000);
 
   const loadUsers = () =>{
@@ -42,35 +42,37 @@ export const ListPage: React.FC = () => {
   }, [debouncedFilter]);
   return (
     <>
-      <Input
-        color="success"
-        value={value}
-        onChange={(e) => {
-          setValue(e.target.value);
-        }}
-        required
-      />
-      <Typography sx={{ fontSize: 30 }} color="text.secondary" gutterBottom>
-        Hello from List page
-      </Typography>
-
+      <div className="">
+        <section className="form-sectionList">
+          <label className="labelList">
+            Type the name of the organization to search for it in the Github API
+          </label>
+          <Input
+            color="success"
+            className="input"
+            value={value}
+            onChange={(e) => {
+              setValue(e.target.value);
+            }}
+            required
+          />
+        </section>
+      </div>
       <div className="list-user-list-container">
         <span className="list-header">Avatar</span>
         <span className="list-header">Id</span>
         <span className="list-header">Name</span>
 
-        { Array.isArray(members) ? 
-        members.map((member) => (
-          <>
-            <img src={member.avatar_url} />
-            <span>{member.id}</span>
-            <Link to={`/detail/${member.login}/`}>{member.login}</Link>
-          </>
-        )) :null
-        
-        }
+        {Array.isArray(members)
+          ? members.map((member) => (
+              <>
+                <img src={member.avatar_url} />
+                <span>{member.id}</span>
+                <Link to={`/detail/${member.login}/`}>{member.login}</Link>
+              </>
+            ))
+          : null}
       </div>
-      <Link to="/detail">Navigate to detail page</Link>
     </>
   );
 };

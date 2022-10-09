@@ -6,9 +6,11 @@ export const DetailPage: React.FC = () => {
 
   return (
     <>
-      <h2>Hello from Detail page</h2>
-      <h3>User Id: {id}</h3>
-      <Link to="/list">Back to list page</Link>
+      <h1 className="heading">Details Id: {id}</h1>
+
+      <Link className="linkbutton" to="/list">
+        Back to list page
+      </Link>
     </>
   );
 };

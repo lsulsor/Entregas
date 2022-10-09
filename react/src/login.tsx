@@ -46,7 +46,7 @@ export const LoginPage: React.FC = () => {
               />
             </div>
 
-            <Button variant="contained" type="submit">
+            <Button className="linkbutton" variant="contained" type="submit">
               Login
             </Button>
           </form>
