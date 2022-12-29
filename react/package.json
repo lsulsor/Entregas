@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "http://apitest.psicopluslog.es/",
   "scripts": {
     "start": "run-p -l type-check:watch start:dev",
     "type-check": "tsc --noEmit",
